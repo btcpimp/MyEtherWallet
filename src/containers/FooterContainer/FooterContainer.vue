@@ -1,9 +1,13 @@
 <template>
-  <div class="footer">
+  <div class="footer mew-main">
     <!-- Modal -->
     <feedback-modal />
     <div class="wrap">
-      <div class="page-container">
+      <div
+        :class="
+          address !== null ? 'page-container-access-wallet' : 'page-container'
+        "
+      >
         <div class="grid-col-1-1-1-2 footer-contents">
           <div
             v-for="(item, index) in footerContent"
@@ -278,7 +282,10 @@ export default {
     };
   },
   computed: {
-    ...mapState(['ethDonationAddress'])
+    ...mapState(['ethDonationAddress', 'account']),
+    address() {
+      return this.account.address;
+    }
   },
   mounted() {
     if (Misc.isMewCx()) {

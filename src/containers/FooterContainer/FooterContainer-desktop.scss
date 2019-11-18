@@ -1,4 +1,5 @@
 @import '~@/scss/GlobalVariables';
+
 @media all and (min-width: calc(#{$tablet-width} - 200px)) {
   a,
   a:link,
@@ -10,6 +11,12 @@
     * {
       text-decoration: none;
     }
+  }
+
+  .page-container-access-wallet {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
   }
 
   .wrap {
@@ -45,6 +52,7 @@
 
         .content {
           margin-bottom: 15px;
+
           &:last-child {
             margin-bottom: 0;
           }
@@ -94,7 +102,9 @@
         border-radius: 100px;
       }
     }
-  } // .footer-contents
+  }
+
+  // .footer-contents
 
   .foot-note {
     align-items: center;
@@ -148,7 +158,9 @@
       }
     }
   }
-} // @media all and (min-width: calc(#{$tablet-width} + 1px))
+}
+
+// @media all and (min-width: calc(#{$tablet-width} + 1px))
 
 .version {
   padding-left: 50px;
